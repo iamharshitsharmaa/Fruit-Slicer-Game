@@ -25,7 +25,8 @@ $(function () {
     }
   });
 
-  $("#fruit1").mouseover(function () {
+  // Handle both mouseover and touch events for mobile compatibility
+  $("#fruit1").on("mouseover touchstart", function () {
     score++;
     $("#scoreValue").html(score);
     $("#slicesound")[0].play();
@@ -47,7 +48,7 @@ $(function () {
     $("#fruit1").show();
     chooseRandom();
     $("#fruit1").css({
-      left: Math.round(550 * Math.random()),
+      left: Math.round($("#fruitcontainer").width() * Math.random()),
       top: -50,
     });
     step = 1 + Math.round(5 * Math.random());
@@ -58,7 +59,7 @@ $(function () {
           $("#fruit1").show();
           chooseRandom();
           $("#fruit1").css({
-            left: Math.round(550 * Math.random()),
+            left: Math.round($("#fruitcontainer").width() * Math.random()),
             top: -50,
           });
           step = 1 + Math.round(5 * Math.random());
@@ -67,7 +68,7 @@ $(function () {
         } else {
           playing = false;
           $("#score").hide();
-          $("#startreset").html("Start Game");
+          $("#startReset").html("Start Game");
           $("#gameOver").show();
           $("#gameOver").html("<p>Game Over!</p><p>Your score is " + score + "</p>");
           $("#trialsleft").hide();
