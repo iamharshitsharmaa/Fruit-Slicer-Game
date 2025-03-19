@@ -1,0 +1,210 @@
+html {
+  height: 100%;
+  background: radial-gradient(circle, #fff, rgb(189, 182, 182));
+  background-image: url(https://wallpapercave.com/wp/wp7567364.jpg);
+  background-size: cover;
+  font-family: cursive, sans-serif;
+}
+
+#container {
+  width: 90%;
+  max-width: 750px;
+  height: auto;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#front {
+  font-size: 2.5rem;
+  color: #d3901d;
+  width: 90%;
+  max-width: 650px;
+  height: auto;
+  padding: 10px;
+  margin: 30px auto 20px auto;
+  z-index: 2;
+  display: none;
+  text-align: center;
+}
+
+#front img {
+  width: 60%;
+  max-width: 280px;
+}
+
+#instructions {
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 1.5rem;
+  background-color: #d3901d;
+  color: #2e1d11;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 0px 0px #775012;
+}
+
+#fruitcontainer {
+  background: url(https://raw.githubusercontent.com/Saumya-07/Fruit-Slicer/master/images/wood-bg2.jpg);
+  background-size: cover;
+  width: 90%;
+  max-width: 650px;
+  height: auto;
+  min-height: 450px;
+  padding: 10px;
+  margin: 30px auto 20px auto;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 4px 0px 0px #4b4b4e;
+  position: relative;
+}
+
+.fruit {
+  display: none;
+  position: absolute;
+}
+
+#score {
+  display: none;
+}
+
+.scoreDisplay {
+  z-index: 1;
+  display: flex;
+  background-color: transparent;
+  color: #888e61;
+  position: absolute;
+  font-size: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+#score img {
+  width: 30px;
+  padding-right: 5px;
+}
+
+#trialsleft {
+  margin-top: 7px;
+  display: flex;
+  position: absolute;
+  right: 10%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.life {
+  width: 25px;
+  padding-right: 5px;
+}
+
+#startReset {
+  position: relative;
+  width: 100px;
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  text-align: center;
+  background-color: #89BA19;
+  box-shadow: 0px 4px 0px 0px #5c5619;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+#startReset:active {
+  background-color: #69620c;
+  box-shadow: 0px 0px #5c5619;
+  top: 4px;
+  color: white;
+}
+
+#gameOver {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  background: transparent;
+  color: #d3901d;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #container {
+    width: 95%;
+  }
+
+  #instructions {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .scoreDisplay {
+    font-size: 1.2rem;
+  }
+
+  #trialsleft {
+    left: auto;
+    right: 5%;
+  }
+
+  .life {
+    width: 20px;
+  }
+
+  #gameOver {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  #front {
+    font-size: 2rem;
+  }
+
+  #instructions {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  #fruitcontainer {
+    min-height: 400px;
+  }
+
+  .scoreDisplay {
+    font-size: 1rem;
+  }
+
+  #trialsleft {
+    right: 3%;
+  }
+
+  .life {
+    width: 15px;
+  }
+
+  #startReset {
+    width: 80px;
+    font-size: 0.9rem;
+  }
+
+  #gameOver {
+    font-size: 1.2rem;
+  }
+}
